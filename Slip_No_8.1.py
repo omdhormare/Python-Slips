@@ -1,10 +1,7 @@
-s = (10, 20, 30, 40, 10, 20, 30)
+#A) Write a python script to find the repeated items of a tuple
 
-def find_repeats(t):
-    repeats = []
-    for item in t:
-        if t.count(item) > 1 and item not in repeats:
-            repeats.append(item)
-    return repeats
+t=(10,20,10,50,60,20)
 
-print(find_repeats(s))
+for i in t:
+    if t.count(i)>1:
+        print(i,end=" ")
