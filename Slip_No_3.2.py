@@ -3,34 +3,34 @@ gender. Create a subclass called Test with member marks of 3 subjects. Create th
 objects of the Test class and display all the details of the student with total marks.
 '''
 class student:
-    def Accept(self):
-        self.rno=int(input("Enter Roll No : "))
+    def __init__(self):
+        self.rno=int(input("Enter Rno : "))
         self.name=input("Enter Name : ")
-        self.age=input("Enter Age : ")
+        self.age=int(input("Enter Age : "))
         self.gender=input("Enter Gender : ")
-        
+
+class test(student):
+    def mark(self):
+        self.m1=int(input("Enter M1 Marks : "))
+        self.m2=int(input("Enter M2 Marks : "))
+        self.m3=int(input("Enter M3 Marks : "))
+        self.total=self.m1 + self.m2 + self.m3
     def dis(self):
-        print("\nRoll No : ",self.rno)
+        print("Rno : ",self.rno)
         print("Name : ",self.name)
         print("Age : ",self.age)
         print("Gender : ",self.gender)
+        print("Total Marks : ",self.total)
         
+ob=test()
+ob.mark()
 
-class Test(student):
-    def AcceptS(self):
-        self.java=int(input("Enter Java Marks : "))
-        self.python=int(input("Enter Python Marks : "))
-        self.oose=int(input("Enter OOSE Marks : "))
-        
-    def disT(self):
-        print("\nJava Marks : ",self.java)
-        print("Python Marks : ",self.python)
-        print("OOSE Marks : ",self.oose)
-        print("Total Marks : ",self.java+self.python+self.oose)
-        
-    
-ob=Test()
-ob.Accept()
-ob.AcceptS()
+ob1=test()
+ob1.mark()
+
+ob2=test()
+ob2.mark()
+
 ob.dis()
-ob.disT()    
+ob1.dis()
+ob2.dis()

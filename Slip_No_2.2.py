@@ -4,9 +4,10 @@ from tkinter import *
 window=Tk()
 
 def digital_clock():
-    t=time.strftime("%I : %M : %S ")
+    t=time.strftime("%H : %M : %S : %D")
     l.config(text=t)
-    l.after(1000,digital_clock)
+    l.after(100,digital_clock)
+    
 window.geometry("1000x1000")
 l=Label(window,font=("arial","60"),fg="orange",bg="black")
 l.pack()
